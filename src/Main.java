@@ -10,23 +10,27 @@ public class Main {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
         System.out.println(" Задача №2 ");
-
-
+        clientOS = 0;
         int clientDeviceYear = 2015;
-        if (clientDeviceYear >= 2015 && clientOS == 0) {
+        if (clientDeviceYear < 2015 && clientOS == 0) {
             System.out.println(" Установите облегченную версию приложения для iOS по ссылке");
-        } else if (clientOS == 1 && clientDeviceYear <= 2015) {
+        }else if (clientDeviceYear >= 2015 && clientOS == 0) {
+            System.out.println(" Установите обычную версию приложения для iOS по ссылке");
+        } else if (clientOS == 1 && clientDeviceYear < 2015) {
             System.out.println(" Установите облегченную версию приложения для Android по ссылке ");
+        }else{
+            System.out.println(" Установите обычную версию приложения для Android по ссылке ");
         }
+
         System.out.println(" Задача №3");
         int year = 2015;
-        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-            System.out.println(year + " год високосный ");
-        } else {
+        if (year > 1584 && ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)){
+        System.out.println(year + " год високосный ");
+    }else {
             System.out.println(year + " год не является високосным");
         }
-        System.out.println(" Задача №4");
 
+        System.out.println(" Задача №4");
         int deliveryDistance = 95;
         int days = 1;
         if (deliveryDistance <= 20) {
@@ -38,6 +42,7 @@ public class Main {
         } else {
             System.out.println(" Доставки нет");
         }
+
         System.out.println(" Задача №5");
         int mounthNumber = 6;
         switch (mounthNumber) {
